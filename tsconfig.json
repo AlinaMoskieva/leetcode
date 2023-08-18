@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "ES2022",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "lib": [
+      "ES2023",
+      "ES6"
+    ],
+    "types": [
+      "node"
+    ],
+    "target": "es2015",
+    "esModuleInterop": true,
+  },
+  "include": [
+    "**/*.ts"
+  ],
+}
