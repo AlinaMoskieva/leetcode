@@ -21,6 +21,7 @@ https://leetcode.com/problems/hamming-distance/
 // Input: x = 3, y = 1
 // Output: 1
 
+// Complexity: T: O(n), S: O(1)
 function hammingDistance(x: number, y: number): number {
   let xorToBitRepresentation: string = (x ^ y).toString(2);
 
