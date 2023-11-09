@@ -4,8 +4,6 @@
 
 // A pair (i, j) is called good if nums[i] == nums[j] and i < j.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,2,3,1,1,3]
@@ -20,7 +18,6 @@
 
 // Input: nums = [1,2,3]
 // Output: 0
- 
 
 // Constraints:
 
@@ -31,13 +28,17 @@ function numIdenticalPairs(nums: number[]): number {
   let numberOfPairs: number = 0;
   let numberMaps: Map<number, number> = new Map();
 
-  nums.map((value) => numberMaps.set(value, numberMaps.has(value) ? numberMaps.get(value) + 1 : 1));
+  nums.map((value) =>
+    numberMaps.set(value, numberMaps.has(value) ? numberMaps.get(value) + 1 : 1)
+  );
 
-  numberMaps.forEach((value) => numberOfPairs += value > 1 ? (value - 1) * value / 2 : 0);
+  numberMaps.forEach(
+    (value) => (numberOfPairs += value > 1 ? ((value - 1) * value) / 2 : 0)
+  );
 
   return numberOfPairs;
-};
+}
 
-console.log(numIdenticalPairs([1,2,3,1,1,3])); // 4
-console.log(numIdenticalPairs([1,1,1,1])); // 6
-console.log(numIdenticalPairs([1,2,3])); // 0
+console.log(numIdenticalPairs([1, 2, 3, 1, 1, 3])); // 4
+console.log(numIdenticalPairs([1, 1, 1, 1])); // 6
+console.log(numIdenticalPairs([1, 2, 3])); // 0

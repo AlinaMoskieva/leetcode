@@ -5,25 +5,21 @@
 
 // A valid BST is defined as follows:
 
-// The left 
+// The left
 // subtree
 //  of a node contains only nodes with keys less than the node's key.
 // The right subtree of a node contains only nodes with keys greater than the node's key.
 // Both the left and right subtrees must also be binary search trees.
- 
 
 // Example 1:
-
 
 // Input: root = [2,1,3]
 // Output: true
 // Example 2:
 
-
 // Input: root = [5,1,4,null,null,3,6]
 // Output: false
 // Explanation: The root node's value is 5 but its right child's value is 4.
- 
 
 // Constraints:
 
@@ -44,16 +40,23 @@
  * }
  */
 
-function isValid(root: TreeNode | null, leftBoundary: number, rightBoundary: number): boolean {
+function isValid(
+  root: TreeNode | null,
+  leftBoundary: number,
+  rightBoundary: number
+): boolean {
   if (root === null) return true;
 
   if (root.val > leftBoundary && root.val < rightBoundary) {
-      return isValid(root.left, leftBoundary, root.val) && isValid(root.right, root.val, rightBoundary)
+    return (
+      isValid(root.left, leftBoundary, root.val) &&
+      isValid(root.right, root.val, rightBoundary)
+    );
   } else {
-      return false;
+    return false;
   }
 }
 
 function isValidBST(root: TreeNode | null): boolean {
-return isValid(root, -Infinity, Infinity);
-};
+  return isValid(root, -Infinity, Infinity);
+}

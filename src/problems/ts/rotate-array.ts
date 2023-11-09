@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/rotate-array/
-// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative. 
+// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
 
 // Example 1:
 
@@ -13,17 +13,15 @@
 
 // Input: nums = [-1,-100,3,99], k = 2
 // Output: [3,99,-1,-100]
-// Explanation: 
+// Explanation:
 // rotate 1 steps to the right: [99,-1,-100,3]
 // rotate 2 steps to the right: [3,99,-1,-100]
- 
 
 // Constraints:
 
 // 1 <= nums.length <= 105
 // -231 <= nums[i] <= 231 - 1
 // 0 <= k <= 105
- 
 
 // Follow up:
 
@@ -33,14 +31,14 @@
 /**
  Do not return anything, modify nums in-place instead.
  */
- function rotate(nums: number[], k: number): void {
-  while(k > nums.length) {
+function rotate(nums: number[], k: number): void {
+  while (k > nums.length) {
     k -= nums.length;
   }
 
   const lastKElems: number[] = nums.splice(nums.length - k, k);
   nums.unshift(...lastKElems);
- };
+}
 
- console.log(rotate([1,2,3,4,5,6,7], 5));
- console.log(rotate([1, 2], 3))
+console.log(rotate([1, 2, 3, 4, 5, 6, 7], 5));
+console.log(rotate([1, 2], 3));

@@ -14,4 +14,4 @@ let fn = (arr, target) => {
   }
 
   return left;
-}
+};

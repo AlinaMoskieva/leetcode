@@ -28,7 +28,6 @@
 //
 // Follow up: If this function is called many times, how would you optimize it?
 
-
 // Note: Unsigned Integers (often called "uints") are just like integers (whole numbers) but have the property that
 // they don't have a + or - sign associated with them. Thus they are always non-negative (zero or positive).
 
@@ -39,4 +38,4 @@ function reverseBits(n: number): number {
   let paddedReversedStringifiedN: string = reversedStringifiedN.padEnd(32, '0');
 
   return parseInt(paddedReversedStringifiedN, 2);
-};
+}

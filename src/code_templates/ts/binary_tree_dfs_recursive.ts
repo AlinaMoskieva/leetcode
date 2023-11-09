@@ -1,6 +1,6 @@
 // Binary tree: DFS (recursive)
 // @ts-ignore
-let dfs = root => {
+let dfs = (root) => {
   if (!root) {
     return;
   }
@@ -11,4 +11,4 @@ let dfs = root => {
   dfs(root.left);
   dfs(root.right);
   return ans;
-}
+};

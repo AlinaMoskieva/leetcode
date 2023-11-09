@@ -4,8 +4,6 @@
 
 // A segment is defined to be a contiguous sequence of non-space characters.
 
- 
-
 // Example 1:
 
 // Input: s = "Hello, my name is John"
@@ -15,7 +13,6 @@
 
 // Input: s = "Hello"
 // Output: 1
- 
 
 // Constraints:
 
@@ -24,9 +21,9 @@
 // The only space character in s is ' '.
 
 function countSegments(s: string): number {
-  return s.split(' ').filter((letter) => letter !== '').length
-};
+  return s.split(' ').filter((letter) => letter !== '').length;
+}
 
 function countSegments1(s: string): number {
-  return s.split(/\s+/).filter((letter) => letter !== '').length
-};
+  return s.split(/\s+/).filter((letter) => letter !== '').length;
+}

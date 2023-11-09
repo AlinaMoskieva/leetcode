@@ -51,7 +51,7 @@ function setZeroes(matrix: number[][]): void {
     }
   }
 
-  if (columsToZero.length > 0){
+  if (columsToZero.length > 0) {
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < columsToZero.length; j++) {
         matrix[i][columsToZero[j]] = 0;
@@ -59,11 +59,11 @@ function setZeroes(matrix: number[][]): void {
     }
   }
 
-  if (rowsToZero.length > 0){
+  if (rowsToZero.length > 0) {
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < rowsToZero.length; j++) {
         matrix[rowsToZero[j]][i] = 0;
       }
     }
   }
-};
+}

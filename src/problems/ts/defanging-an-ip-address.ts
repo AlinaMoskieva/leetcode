@@ -4,8 +4,6 @@
 
 // A defanged IP address replaces every period "." with "[.]".
 
- 
-
 // Example 1:
 
 // Input: address = "1.1.1.1"
@@ -14,7 +12,6 @@
 
 // Input: address = "255.100.50.0"
 // Output: "255[.]100[.]50[.]0"
- 
 
 // Constraints:
 
@@ -22,4 +19,4 @@
 
 function defangIPaddr(address: string): string {
   return address.replaceAll('.', '[.]');
-};
+}

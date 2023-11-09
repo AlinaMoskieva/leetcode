@@ -1,6 +1,6 @@
 // Binary tree: DFS (iterative)
 // @ts-ignore
-let dfs = root => {
+let dfs = (root) => {
   let stack = [root];
   let ans = 0;
 
@@ -16,4 +16,4 @@ let dfs = root => {
   }
 
   return ans;
-}
+};

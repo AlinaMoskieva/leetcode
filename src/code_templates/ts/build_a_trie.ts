@@ -13,7 +13,7 @@ class TrieNode {
 }
 
 // @ts-ignore
-let fn = words => {
+let fn = (words) => {
   let root = new TrieNode();
   for (const word of words) {
     let curr = root;
@@ -29,4 +29,4 @@ let fn = words => {
   }
 
   return root;
-}
+};

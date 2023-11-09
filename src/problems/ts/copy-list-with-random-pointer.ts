@@ -15,8 +15,6 @@
 // random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.
 // Your code will only be given the head of the original linked list.
 
- 
-
 // Example 1:
 // Input: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
 // Output: [[7,null],[13,0],[11,4],[10,2],[1,0]]
@@ -28,35 +26,36 @@
 // -104 <= Node.val <= 104
 // Node.random is null or is pointing to some node in the linked list.
 
-
 // Definition for Node.
 class Node {
-     val: number
-     next: Node | null
-     random: Node | null
-     constructor(val?: number, next?: Node, random?: Node) {
-         this.val = (val===undefined ? 0 : val)
-         this.next = (next===undefined ? null : next)
-         this.random = (random===undefined ? null : random)
-     }
- }
+  val: number;
+  next: Node | null;
+  random: Node | null;
+  constructor(val?: number, next?: Node, random?: Node) {
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
+    this.random = random === undefined ? null : random;
+  }
+}
 
 function copyRandomList(head: Node | null): Node | null {
-    let pointers = new Map();
-    let currentNode: Node = head;
+  let pointers = new Map();
+  let currentNode: Node = head;
 
-    while (currentNode) {
-      pointers.set(currentNode, new Node(currentNode.val)) 
-      currentNode = currentNode.next
-    }
+  while (currentNode) {
+    pointers.set(currentNode, new Node(currentNode.val));
+    currentNode = currentNode.next;
+  }
 
-    currentNode = head;
+  currentNode = head;
 
-    while (currentNode) {
-      if (currentNode.next) pointers.get(currentNode).next = pointers.get(currentNode.next)
-      if (currentNode.random) pointers.get(currentNode).random = pointers.get(currentNode.random)
-      currentNode = currentNode.next
-    }
+  while (currentNode) {
+    if (currentNode.next)
+      pointers.get(currentNode).next = pointers.get(currentNode.next);
+    if (currentNode.random)
+      pointers.get(currentNode).random = pointers.get(currentNode.random);
+    currentNode = currentNode.next;
+  }
 
-    return pointers.get(head)
-};
+  return pointers.get(head);
+}

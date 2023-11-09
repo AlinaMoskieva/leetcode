@@ -1,4 +1,4 @@
-https://leetcode.com/problems/hamming-distance/
+//leetcode.com/problems/hamming-distance/
 
 // 461. Hamming Distance
 
@@ -22,8 +22,8 @@ https://leetcode.com/problems/hamming-distance/
 // Output: 1
 
 // Complexity: T: O(n), S: O(1)
-function hammingDistance(x: number, y: number): number {
+https: function hammingDistance(x: number, y: number): number {
   let xorToBitRepresentation: string = (x ^ y).toString(2);
 
   return xorToBitRepresentation.split('').filter((bit) => bit === '1').length;
-};
+}

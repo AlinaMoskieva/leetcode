@@ -4,8 +4,6 @@
 
 // Given a string s, return true if it is a palindrome, or false otherwise.
 
- 
-
 // Example 1:
 
 // Input: s = "A man, a plan, a canal: Panama"
@@ -22,7 +20,6 @@
 // Output: true
 // Explanation: s is an empty string "" after removing non-alphanumeric characters.
 // Since an empty string reads the same forward and backward, it is a palindrome.
- 
 
 // Constraints:
 
@@ -30,23 +27,27 @@
 // s consists only of printable ASCII characters.
 
 function isPalindrome1(s: string): boolean {
-    const preparedString: string = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const preparedString: string = s.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-    return preparedString === preparedString.split("").reverse().join("");
-};
+  return preparedString === preparedString.split('').reverse().join('');
+}
 
 function isPalindrome(s: string): boolean {
-  const preparedString: string = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const preparedString: string = s.toLowerCase().replace(/[^a-z0-9]/g, '');
 
   for (let i = 0; i < preparedString.length / 2; i++) {
-    if (preparedString.charAt(i) !== preparedString.charAt(preparedString.length - i- 1)) return false;
+    if (
+      preparedString.charAt(i) !==
+      preparedString.charAt(preparedString.length - i - 1)
+    )
+      return false;
   }
 
   return true;
-};
+}
 
-console.log(isPalindrome("A man, a plan, a canal: Panama")) // true
-console.log(isPalindrome("race a car"))  // false
-console.log(isPalindrome(" ")) // true
-console.log(isPalindrome("ab_a")) // true
-console.log(isPalindrome("0P")) // false
+console.log(isPalindrome('A man, a plan, a canal: Panama')); // true
+console.log(isPalindrome('race a car')); // false
+console.log(isPalindrome(' ')); // true
+console.log(isPalindrome('ab_a')); // true
+console.log(isPalindrome('0P')); // false

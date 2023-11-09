@@ -4,7 +4,8 @@
 let fn = (arr, k) => {
   let counts = new Map();
   counts.set(0, 1);
-  let ans = 0, curr = 0;
+  let ans = 0,
+    curr = 0;
 
   for (const num of arr) {
     // do logic to change curr
@@ -13,4 +14,4 @@ let fn = (arr, k) => {
   }
 
   return ans;
-}
+};

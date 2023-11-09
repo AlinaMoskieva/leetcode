@@ -30,23 +30,23 @@
 // s consists of parentheses only '()[]{}'.
 
 function isValid(s: string): boolean {
-    const openBrackets: string[] = ['(', '{', '['];
-    const closeBrackets: string[] = [')', '}', ']'];
-    let currentOpened: string[] = [];
+  const openBrackets: string[] = ['(', '{', '['];
+  const closeBrackets: string[] = [')', '}', ']'];
+  let currentOpened: string[] = [];
 
-    for (let i = 0; i < s.length; i++) {
-        if (openBrackets.includes(s[i])) {
-            currentOpened.push(s[i]);
-        } else {
-            const lastOpened: string = currentOpened.pop();
-            const closeBracketIndex: number = closeBrackets.indexOf(s[i]);
-            if (lastOpened != openBrackets[closeBracketIndex]) {
-                return false;
-            }
-        }
+  for (let i = 0; i < s.length; i++) {
+    if (openBrackets.includes(s[i])) {
+      currentOpened.push(s[i]);
+    } else {
+      const lastOpened: string = currentOpened.pop();
+      const closeBracketIndex: number = closeBrackets.indexOf(s[i]);
+      if (lastOpened != openBrackets[closeBracketIndex]) {
+        return false;
+      }
     }
+  }
 
-    if (currentOpened.length > 0) return false;
+  if (currentOpened.length > 0) return false;
 
-    return true;
-};
+  return true;
+}

@@ -34,7 +34,7 @@
 
 // Complexity: T: O(n), S: O(1)
 function missingNumber(nums: number[]): number {
-    let sum: number = (nums.length * (nums.length + 1)) / 2;
-    nums.map((num) => sum -= num);
-    return sum;
-};
+  let sum: number = (nums.length * (nums.length + 1)) / 2;
+  nums.map((num) => (sum -= num));
+  return sum;
+}

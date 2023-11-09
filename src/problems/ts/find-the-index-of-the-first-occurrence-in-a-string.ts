@@ -13,7 +13,6 @@
 // Input: haystack = "leetcode", needle = "leeto"
 // Output: -1
 // Explanation: "leeto" did not occur in "leetcode", so we return -1.
- 
 
 // Constraints:
 
@@ -22,17 +21,17 @@
 
 function strStr(haystack: string, needle: string): number {
   const firstLetter = needle.charAt(0);
-  let i = haystack.indexOf(firstLetter); 
-   
-  while (i >= 0) {
-   if (haystack.substring(i, i + needle.length) === needle) return i;
+  let i = haystack.indexOf(firstLetter);
 
-   i = haystack.indexOf(firstLetter, i + 1); 
+  while (i >= 0) {
+    if (haystack.substring(i, i + needle.length) === needle) return i;
+
+    i = haystack.indexOf(firstLetter, i + 1);
   }
 
   return -1;
-};
+}
 
-console.log(strStr("sadbutsad", "sad"));
-console.log(strStr("leetcode", "leeto"));
-console.log(strStr("leeto", "leeto"));
+console.log(strStr('sadbutsad', 'sad'));
+console.log(strStr('leetcode', 'leeto'));
+console.log(strStr('leeto', 'leeto'));

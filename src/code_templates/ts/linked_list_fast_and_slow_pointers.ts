@@ -1,6 +1,6 @@
 // Linked list: fast and slow pointer
 // @ts-ignore
-let fn = head => {
+let fn = (head) => {
   let slow = head;
   let fast = head;
   let ans = 0;
@@ -12,4 +12,4 @@ let fn = head => {
   }
 
   return ans;
-}
+};

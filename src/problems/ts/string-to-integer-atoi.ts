@@ -16,7 +16,6 @@
 
 // Only the space character ' ' is considered a whitespace character.
 // Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
- 
 
 // Example 1:
 
@@ -60,7 +59,7 @@
 
 function myAtoi(s: string): number {
   const minNumber = Math.pow(-2, 31);
-  const maxNumber = Math.pow(2, 31) -1;
+  const maxNumber = Math.pow(2, 31) - 1;
 
   let number = 0;
   let positive: boolean = true;
@@ -69,24 +68,28 @@ function myAtoi(s: string): number {
   s = s.trim();
 
   for (let i = 0; i < s.length; i++) {
-    if (!started && s[i] === "-" && !isNaN(Number(s[i + 1]))) {
+    if (!started && s[i] === '-' && !isNaN(Number(s[i + 1]))) {
       positive = false;
       continue;
     }
 
-    if (!started && s[i] === "+" && !isNaN(Number(s[i + 1]))) continue;
+    if (!started && s[i] === '+' && !isNaN(Number(s[i + 1]))) continue;
     if (isNaN(parseInt(s[i]))) break;
-      
+
     number = number * 10 + Number(s[i]);
     started = true;
   }
 
-  positive ? number : number = number * -1;
+  positive ? number : (number = number * -1);
 
-  return number > maxNumber ? maxNumber : number < minNumber ? minNumber : number;
-};
+  return number > maxNumber
+    ? maxNumber
+    : number < minNumber
+    ? minNumber
+    : number;
+}
 
-console.log(myAtoi("00000-42a1234"));
+console.log(myAtoi('00000-42a1234'));
 // console.log(myAtoi("4193 with words"));
 // console.log(myAtoi("46"))
 // console.log(myAtoi("   -42")) // -42

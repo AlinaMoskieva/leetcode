@@ -2,8 +2,10 @@
 
 let WINDOW_CONDITION_BROKEN = true;
 // @ts-ignore
-let fn = arr => {
-  let left = 0, ans = 0, curr = 0;
+let fn = (arr) => {
+  let left = 0,
+    ans = 0,
+    curr = 0;
 
   for (let right = 0; right < arr.length; right++) {
     // do logic here to add arr[right] to curr
@@ -17,4 +19,4 @@ let fn = arr => {
   }
 
   return ans;
-}
+};

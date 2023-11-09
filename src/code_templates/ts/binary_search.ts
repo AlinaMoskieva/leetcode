@@ -19,4 +19,4 @@ let fn = (arr, target) => {
 
   // left is the insertion point
   return left;
-}
+};

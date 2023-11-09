@@ -7,10 +7,7 @@
 
 // Return the head of the merged linked list.
 
- 
-
 // Example 1:
-
 
 // Input: list1 = [1,2,4], list2 = [1,3,4]
 // Output: [1,1,2,3,4,4]
@@ -22,7 +19,6 @@
 
 // Input: list1 = [], list2 = [0]
 // Output: [0]
- 
 
 // Constraints:
 
@@ -42,29 +38,31 @@
  * }
  */
 
-
 function compare(listOneCurrentElement, listTwoCurrentElement) {
   let smallerNode: ListNode;
   if (listOneCurrentElement.val < listTwoCurrentElement.val) {
-      smallerNode = listOneCurrentElement;
-      listOneCurrentElement = listOneCurrentElement.next;
+    smallerNode = listOneCurrentElement;
+    listOneCurrentElement = listOneCurrentElement.next;
   } else {
-      smallerNode = listTwoCurrentElement;
-      listTwoCurrentElement = listTwoCurrentElement.next
+    smallerNode = listTwoCurrentElement;
+    listTwoCurrentElement = listTwoCurrentElement.next;
   }
 
-  return [smallerNode, listOneCurrentElement, listTwoCurrentElement] ;
+  return [smallerNode, listOneCurrentElement, listTwoCurrentElement];
 }
 
 function fillWithTail(currentNode, tailCurrentElement): void {
   while (tailCurrentElement) {
-      currentNode.next = tailCurrentElement;
-      tailCurrentElement = tailCurrentElement.next
-      currentNode = currentNode.next;
+    currentNode.next = tailCurrentElement;
+    tailCurrentElement = tailCurrentElement.next;
+    currentNode = currentNode.next;
   }
 }
 
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+function mergeTwoLists(
+  list1: ListNode | null,
+  list2: ListNode | null
+): ListNode | null {
   let head: ListNode;
   let listOneCurrentElement = list1;
   let listTwoCurrentElement = list2;
@@ -72,17 +70,23 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
   if (!listOneCurrentElement) return list2;
   if (!listTwoCurrentElement) return list1;
 
-  [head, listOneCurrentElement, listTwoCurrentElement] = compare(listOneCurrentElement, listTwoCurrentElement)
-  
+  [head, listOneCurrentElement, listTwoCurrentElement] = compare(
+    listOneCurrentElement,
+    listTwoCurrentElement
+  );
+
   let currentNode: ListNode = head;
 
   while (listOneCurrentElement && listTwoCurrentElement) {
-      [currentNode.next, listOneCurrentElement, listTwoCurrentElement] = compare(listOneCurrentElement, listTwoCurrentElement)
-      currentNode = currentNode.next;
+    [currentNode.next, listOneCurrentElement, listTwoCurrentElement] = compare(
+      listOneCurrentElement,
+      listTwoCurrentElement
+    );
+    currentNode = currentNode.next;
   }
 
   if (listOneCurrentElement) fillWithTail(currentNode, listOneCurrentElement);
   if (listTwoCurrentElement) fillWithTail(currentNode, listTwoCurrentElement);
 
   return head;
-};
+}

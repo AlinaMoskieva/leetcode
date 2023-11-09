@@ -5,8 +5,6 @@
 
 // Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 
- 
-
 // Example 1:
 
 // Input: x = 123
@@ -19,17 +17,20 @@
 
 // Input: x = 120
 // Output: 21
- 
 
 // Constraints:
 
 // -231 <= x <= 231 - 1
 
 function reverse(x: number): number {
-  const resultedAbsoluteNumber: number = Number(String(Math.abs(x)).split('').reverse().join(''));
+  const resultedAbsoluteNumber: number = Number(
+    String(Math.abs(x)).split('').reverse().join('')
+  );
 
-  return resultedAbsoluteNumber >= 2** 31 ? 0 : Math.sign(x) * resultedAbsoluteNumber;
-};
+  return resultedAbsoluteNumber >= 2 ** 31
+    ? 0
+    : Math.sign(x) * resultedAbsoluteNumber;
+}
 
 console.log(reverse(-123));
 console.log(reverse(123));

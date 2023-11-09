@@ -6,8 +6,6 @@
 
 // If there is no common prefix, return an empty string "".
 
- 
-
 // Example 1:
 
 // Input: strs = ["flower","flow","flight"]
@@ -17,7 +15,6 @@
 // Input: strs = ["dog","racecar","car"]
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
- 
 
 // Constraints:
 
@@ -25,10 +22,17 @@
 // 0 <= strs[i].length <= 200
 // strs[i] consists of only lowercase English letters.
 
-
-function isTheSameLetterAt(letterPosition: number, setOfSrigs: string[]): boolean {
-  for(let i = 1; i < setOfSrigs.length; i++) {
-    if (setOfSrigs[i].length < letterPosition || setOfSrigs[0].charAt(letterPosition) !== setOfSrigs[i].charAt(letterPosition)) return false;
+function isTheSameLetterAt(
+  letterPosition: number,
+  setOfSrigs: string[]
+): boolean {
+  for (let i = 1; i < setOfSrigs.length; i++) {
+    if (
+      setOfSrigs[i].length < letterPosition ||
+      setOfSrigs[0].charAt(letterPosition) !==
+        setOfSrigs[i].charAt(letterPosition)
+    )
+      return false;
   }
 
   return true;
@@ -49,9 +53,9 @@ function longestCommonPrefix(strs: string[]): string {
   }
 
   return strs[0].substring(0, lastPrexixLetterPosition);
-};
+}
 
-console.log(longestCommonPrefix(["flower","flow","flight"]))
-console.log(longestCommonPrefix(["dog","racecar","car"]))
-console.log(longestCommonPrefix(['']))
-console.log(longestCommonPrefix(["flower","flower","flower","flower"]))
+console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
+console.log(longestCommonPrefix(['dog', 'racecar', 'car']));
+console.log(longestCommonPrefix(['']));
+console.log(longestCommonPrefix(['flower', 'flower', 'flower', 'flower']));

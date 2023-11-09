@@ -39,7 +39,7 @@ function threeSum(nums: number[]): number[][] {
 
   nums.sort((a, b) => a - b);
 
-  for(let i = 0; i < nums.length - 2; i++) {
+  for (let i = 0; i < nums.length - 2; i++) {
     if (nums[i] !== nums[i - 1]) {
       let leftPointer: number = i + 1;
       let rightPointer: number = nums.length - 1;
@@ -65,4 +65,4 @@ function threeSum(nums: number[]): number[][] {
   }
 
   return triplets;
-};
+}

@@ -1,6 +1,6 @@
 // Reversing a linked list
 // @ts-ignore
-let fn = head => {
+let fn = (head) => {
   let curr = head;
   let prev = null;
   while (curr) {
@@ -11,4 +11,4 @@ let fn = head => {
   }
 
   return prev;
-}
+};

@@ -15,21 +15,20 @@
 
 // Input: s = "aabb"
 // Output: -1
- 
 
 // Constraints:
 // 1 <= s.length <= 105
 // s consists of only lowercase English letters.
 
-function firstUniqChar(s: string): number {  
+function firstUniqChar(s: string): number {
   for (let i = 0; i < s.length; i++) {
-    if (s.indexOf(s.charAt(i)) === i && s.indexOf(s.charAt(i), i + 1) === -1) return i;
+    if (s.indexOf(s.charAt(i)) === i && s.indexOf(s.charAt(i), i + 1) === -1)
+      return i;
   }
 
   return -1;
-};
+}
 
-console.log(firstUniqChar("leetcode"))
-console.log(firstUniqChar("loveleetcode"))
-console.log(firstUniqChar("aabb"))
-
+console.log(firstUniqChar('leetcode'));
+console.log(firstUniqChar('loveleetcode'));
+console.log(firstUniqChar('aabb'));

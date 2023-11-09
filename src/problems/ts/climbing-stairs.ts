@@ -5,8 +5,6 @@
 
 // Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
- 
-
 // Example 1:
 
 // Input: n = 2
@@ -23,13 +21,18 @@
 // 2. 1 step + 2 steps
 // 3. 2 steps + 1 step
 
-
-function makeStep(stepsNumber: number, stepFrom: number, counter: Record<number, number>, desctination: number, activeRoutes: number[]): number {
+function makeStep(
+  stepsNumber: number,
+  stepFrom: number,
+  counter: Record<number, number>,
+  desctination: number,
+  activeRoutes: number[]
+): number {
   let waysNumber = 0;
   let currentPoint = stepFrom + stepsNumber;
 
   if (currentPoint === desctination) {
-    waysNumber += counter[stepFrom] ? counter[stepFrom] : 1
+    waysNumber += counter[stepFrom] ? counter[stepFrom] : 1;
   }
 
   if (currentPoint < desctination) {
@@ -53,7 +56,7 @@ function climbStairs1(n: number): number {
   }
 
   return waysNumber;
-};
+}
 
 // Complixity: T: O(n), S: O(1)
 function climbStairs(n: number): number {
@@ -68,6 +71,6 @@ function climbStairs(n: number): number {
     oneBefore = oneBefore + twoBefore;
     twoBefore = tmp;
   }
- 
+
   return oneBefore;
 }

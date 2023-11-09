@@ -28,14 +28,14 @@
 
 // [2,7,9,3,1]
 function rob(nums: number[]): number {
-    let oddSum: number = 0;
-    let evenSum: number = 0;
+  let oddSum: number = 0;
+  let evenSum: number = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        if (i % 2 == 0) {
-            evenSum = Math.max(evenSum + nums[i], oddSum);
-        } else {
-            oddSum = Math.max(oddSum + nums[i], evenSum);
-        }
+  for (let i = 0; i < nums.length; i++) {
+    if (i % 2 == 0) {
+      evenSum = Math.max(evenSum + nums[i], oddSum);
+    } else {
+      oddSum = Math.max(oddSum + nums[i], evenSum);
     }
+  }
 }

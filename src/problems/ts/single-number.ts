@@ -9,8 +9,6 @@
 
 // You must implement a solution with a linear runtime complexity and use only constant extra space.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,2,1]
@@ -23,7 +21,6 @@
 
 // Input: nums = [1]
 // Output: 1
- 
 
 // Constraints:
 
@@ -31,15 +28,14 @@
 // -3 * 104 <= nums[i] <= 3 * 104
 // Each element in the array appears twice except for one element which appears only once.
 
-
 function singleNumber(nums: number[]): number {
   nums.sort();
-  
-  for(let i = 0; i < nums.length; i+=2) {
-    if (i == nums.length - 1 || nums[i] != nums[i+1]) return nums[i];
-  }
-};
 
-console.log(singleNumber([2,2,1]));
-console.log(singleNumber([4,1,2,1,2]));
+  for (let i = 0; i < nums.length; i += 2) {
+    if (i == nums.length - 1 || nums[i] != nums[i + 1]) return nums[i];
+  }
+}
+
+console.log(singleNumber([2, 2, 1]));
+console.log(singleNumber([4, 1, 2, 1, 2]));
 console.log(singleNumber([1]));

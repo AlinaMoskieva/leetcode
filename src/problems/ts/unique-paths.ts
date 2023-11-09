@@ -8,8 +8,6 @@
 
 // The test cases are generated so that the answer will be less than or equal to 2 * 109.
 
- 
-
 // Example 1:
 // Input: m = 3, n = 7
 // Output: 28
@@ -21,22 +19,19 @@
 // 1. Right -> Down -> Down
 // 2. Down -> Down -> Right
 // 3. Down -> Right -> Down
- 
 
 // Constraints:
 
-
 function uniquePaths(m: number, n: number): number {
-   let field = Array.from(Array(m).fill(1), () => new Array(n).fill(1));
+  let field = Array.from(Array(m).fill(1), () => new Array(n).fill(1));
 
-   for (let i = 1; i < m; i++) {
+  for (let i = 1; i < m; i++) {
     for (let j = 1; j < n; j++) {
-      field[i][j] = field[i - 1][j] + field[i][j - 1]
+      field[i][j] = field[i - 1][j] + field[i][j - 1];
     }
-   }
+  }
 
   return field[m - 1][n - 1];
+}
 
-};
-
-console.log(uniquePaths(3, 7))
+console.log(uniquePaths(3, 7));

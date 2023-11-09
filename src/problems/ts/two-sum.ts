@@ -20,7 +20,6 @@
 
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
- 
 
 // Constraints:
 
@@ -32,12 +31,12 @@
 function twoSum(nums: number[], target: number): number[] {
   let map = new Map();
 
-  for(let i = 0; i< nums.length; i++) {
-   let currentNumer = nums[i];
-   let lookFor = target - currentNumer;
+  for (let i = 0; i < nums.length; i++) {
+    let currentNumer = nums[i];
+    let lookFor = target - currentNumer;
 
-   if (map.has(lookFor)) return [i, map.get(lookFor)]
+    if (map.has(lookFor)) return [i, map.get(lookFor)];
 
-   map.set(currentNumer, i);
+    map.set(currentNumer, i);
   }
-};
+}

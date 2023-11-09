@@ -2,8 +2,6 @@
 // 709. To Lower Case
 // Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
 
- 
-
 // Example 1:
 
 // Input: s = "Hello"
@@ -16,7 +14,6 @@
 
 // Input: s = "LOVELY"
 // Output: "lovely"
- 
 
 // Constraints:
 
@@ -24,19 +21,19 @@
 // s consists of printable ASCII characters.
 
 function toLowerCase(s: string): string {
-  const codePositionDifference = "a".charCodeAt(0) - "A".charCodeAt(0);
-  const firstUpperCaseCharCode = "A".charAt(0);
-  const lastUpperCaseCharCode = "Z".charAt(0);
+  const codePositionDifference = 'a'.charCodeAt(0) - 'A'.charCodeAt(0);
+  const firstUpperCaseCharCode = 'A'.charAt(0);
+  const lastUpperCaseCharCode = 'Z'.charAt(0);
 
   return s
-    .split("")
+    .split('')
     .map((value) =>
       value.charAt(0) >= firstUpperCaseCharCode &&
       value.charAt(0) <= lastUpperCaseCharCode
         ? String.fromCharCode(value.charCodeAt(0) + codePositionDifference)
         : value
     )
-    .join("");
+    .join('');
 }
 
-toLowerCase("Hello")
+toLowerCase('Hello');

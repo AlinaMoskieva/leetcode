@@ -4,9 +4,9 @@
 // Depending on the problem, you may need to convert the input into an equivalent adjacency list before using the templates.
 
 // @ts-ignore
-let fn = graph => {
+let fn = (graph) => {
   // @ts-ignore
-  let dfs = node => {
+  let dfs = (node) => {
     let ans = 0;
     // do some logic
     for (const neighbor of graph[node]) {
@@ -17,8 +17,8 @@ let fn = graph => {
     }
 
     return ans;
-  }
+  };
 
   let seen = new Set([START_NODE]);
   return dfs(START_NODE);
-}
+};

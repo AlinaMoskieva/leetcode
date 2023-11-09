@@ -27,14 +27,16 @@
 
 // Complexity: T: O(n), S: O(n)
 function maxProfit(prices: number[]): number {
-    let maxProfit: number = 0;
-    let minimumPrice: number = 1000000;
+  let maxProfit: number = 0;
+  let minimumPrice: number = 1000000;
 
-    for (let i = 0; i < prices.length; i++) {
-        if (prices[i] < minimumPrice)  { minimumPrice = prices[i]; }
-
-        maxProfit = Math.max(prices[i] - minimumPrice, maxProfit)
+  for (let i = 0; i < prices.length; i++) {
+    if (prices[i] < minimumPrice) {
+      minimumPrice = prices[i];
     }
 
-    return maxProfit;
-};
+    maxProfit = Math.max(prices[i] - minimumPrice, maxProfit);
+  }
+
+  return maxProfit;
+}

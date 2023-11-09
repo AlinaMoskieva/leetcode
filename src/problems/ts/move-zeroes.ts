@@ -9,8 +9,6 @@
 
 // Note that you must do this in-place without making a copy of the array.
 
- 
-
 // Example 1:
 
 // Input: nums = [0,1,0,3,12]
@@ -28,12 +26,12 @@ function moveZeroes(nums: number[]): void {
       nums[cursor] = number;
       cursor++;
     }
-  })
-  
+  });
+
   while (cursor < nums.length) {
     nums[cursor] = 0;
     cursor++;
   }
-};
+}
 
-console.log(moveZeroes([0,1,2,0,3,4,0,0,5]));
+console.log(moveZeroes([0, 1, 2, 0, 3, 4, 0, 0, 5]));

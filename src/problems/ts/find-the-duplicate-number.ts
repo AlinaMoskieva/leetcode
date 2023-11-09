@@ -6,8 +6,6 @@
 
 // You must solve the problem without modifying the array nums and uses only constant extra space.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,3,4,2,2]
@@ -16,7 +14,6 @@
 
 // Input: nums = [3,1,3,4,2]
 // Output: 3
- 
 
 // Constraints:
 
@@ -24,7 +21,6 @@
 // nums.length == n + 1
 // 1 <= nums[i] <= n
 // All the integers in nums appear only once except for precisely one integer which appears two or more times.
- 
 
 // Follow up:
 
@@ -38,9 +34,9 @@ function findDuplicate(nums: number[]): number {
   let slowPointer = 0;
 
   do {
-    fastPointer = nums[nums[fastPointer]]
+    fastPointer = nums[nums[fastPointer]];
     slowPointer = nums[slowPointer];
-  } while (fastPointer !== slowPointer)
+  } while (fastPointer !== slowPointer);
 
   fastPointer = 0; // to start from the begining of the list
 
@@ -50,4 +46,4 @@ function findDuplicate(nums: number[]): number {
   }
 
   return fastPointer;
-};
+}

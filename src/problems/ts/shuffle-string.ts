@@ -13,7 +13,6 @@
 // Input: s = "abc", indices = [0,1,2]
 // Output: "abc"
 // Explanation: After shuffling, each character remains in its position.
- 
 
 // Constraints:
 
@@ -26,9 +25,9 @@
 function restoreString(s: string, indices: number[]): string {
   let array: string[] = new Array(indices.length);
 
-  for(let i = 0; i < indices.length; i++) {
-    array[indices[i]] = s.charAt(i)
+  for (let i = 0; i < indices.length; i++) {
+    array[indices[i]] = s.charAt(i);
   }
 
   return array.join('');
-};
+}

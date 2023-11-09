@@ -1,6 +1,6 @@
 // Binary tree: BFS
 // @ts-ignore
-let fn = root => {
+let fn = (root) => {
   let queue = [root];
   let ans = 0;
 
@@ -25,4 +25,4 @@ let fn = root => {
   }
 
   return ans;
-}
+};

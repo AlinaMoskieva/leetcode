@@ -27,5 +27,8 @@
 
 // Complexity: T: O(n), S: O(1)
 function hammingWeight(n: number): number {
-  return n.toString(2).split('').filter((bit) => bit === '1').length;
-};
+  return n
+    .toString(2)
+    .split('')
+    .filter((bit) => bit === '1').length;
+}

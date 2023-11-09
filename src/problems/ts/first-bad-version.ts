@@ -13,14 +13,13 @@
  */
 
 // Complexity: T: O(n), S: O(n)
-var solution = function(isBadVersion: any) {
-
-  return function(n: number): number {
+var solution = function (isBadVersion: any) {
+  return function (n: number): number {
     let leftPointer = 1;
     let rightPointer = n;
 
     while (leftPointer < rightPointer) {
-      const medium = Math.floor((leftPointer + rightPointer) / 2); 
+      const medium = Math.floor((leftPointer + rightPointer) / 2);
 
       if (isBadVersion(medium)) {
         rightPointer = medium;

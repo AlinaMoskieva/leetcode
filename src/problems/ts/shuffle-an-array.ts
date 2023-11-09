@@ -50,8 +50,13 @@ class Solution {
     let shuffledNums: number[] = this.nums.slice();
 
     for (let i = 0; i < shuffledNums.length; i++) {
-      const randomIndex: number = Math.floor(Math.random() * shuffledNums.length);
-      [shuffledNums[i], shuffledNums[randomIndex]] = [shuffledNums[randomIndex], shuffledNums[i]];
+      const randomIndex: number = Math.floor(
+        Math.random() * shuffledNums.length
+      );
+      [shuffledNums[i], shuffledNums[randomIndex]] = [
+        shuffledNums[randomIndex],
+        shuffledNums[i]
+      ];
     }
 
     return shuffledNums;

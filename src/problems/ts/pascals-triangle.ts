@@ -17,7 +17,6 @@
 // Input: numRows = 1
 // Output: [[1]]
 
-
 // Complexity T: O(n^2), S: O(n^2)
 function generate(numRows: number): number[][] {
   let result: number[][] = [];
@@ -32,5 +31,5 @@ function generate(numRows: number): number[][] {
     if (i > 0) result[i].push(1);
   }
 
-  return result
-};
+  return result;
+}

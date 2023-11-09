@@ -2,7 +2,7 @@
 
 let START_NODE = 0;
 // @ts-ignore
-let fn = graph => {
+let fn = (graph) => {
   let queue = [START_NODE];
   let seen = new Set([START_NODE]);
   let ans = 0;
@@ -26,4 +26,4 @@ let fn = graph => {
   }
 
   return ans;
-}
+};

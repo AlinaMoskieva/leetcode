@@ -4,12 +4,9 @@
 
 // You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
 
-
 // On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
 
 // Find and return the maximum profit you can achieve.
-
- 
 
 // Example 1:
 
@@ -29,20 +26,17 @@
 // Input: prices = [7,6,4,3,1]
 // Output: 0
 // Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
- 
 
 // Constraints:
 
 // 1 <= prices.length <= 3 * 104
 // 0 <= prices[i] <= 104
 
-
 function maxProfit(prices: number[]): number {
   if (prices.length < 2) return 0;
 
   let profit: number = 0;
   let currentMin: number = prices[0];
-
 
   for (let i = 1; i < prices.length; i++) {
     if (prices[i] < currentMin) {
@@ -57,9 +51,9 @@ function maxProfit(prices: number[]): number {
   }
 
   return profit;
-};
+}
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));
-console.log(maxProfit([1,2,3,4,5]));
-console.log(maxProfit([7,6,4,3,1]));
-console.log(maxProfit([5,2,3,2,6,6,2,9,1,0,7,4,5,0]))
+console.log(maxProfit([1, 2, 3, 4, 5]));
+console.log(maxProfit([7, 6, 4, 3, 1]));
+console.log(maxProfit([5, 2, 3, 2, 6, 6, 2, 9, 1, 0, 7, 4, 5, 0]));

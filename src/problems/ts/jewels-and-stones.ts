@@ -13,7 +13,6 @@
 
 // Input: jewels = "z", stones = "ZZ"
 // Output: 0
- 
 
 // Constraints:
 
@@ -21,10 +20,9 @@
 // jewels and stones consist of only English letters.
 // All the characters of jewels are unique.
 
-
 function numJewelsInStones(jewels: string, stones: string): number {
   return (stones.match(new RegExp(`[!${jewels}]`, 'g')) || []).length;
-};
+}
 
-console.log(numJewelsInStones("aA", "aAAbbbb")); // 3
-console.log(numJewelsInStones("z", "ZZ")); // 0
+console.log(numJewelsInStones('aA', 'aAAbbbb')); // 3
+console.log(numJewelsInStones('z', 'ZZ')); // 0

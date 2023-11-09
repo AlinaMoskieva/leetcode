@@ -4,8 +4,6 @@
 
 // You must do this by modifying the input array in-place with O(1) extra memory.
 
- 
-
 // Example 1:
 
 // Input: s = ["h","e","l","l","o"]
@@ -14,7 +12,6 @@
 
 // Input: s = ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
- 
 
 // Constraints:
 
@@ -25,6 +22,6 @@
  Do not return anything, modify s in-place instead.
  */
 
- function reverseString(s: string[]): void {
-  s.reverse() 
-};
+function reverseString(s: string[]): void {
+  s.reverse();
+}

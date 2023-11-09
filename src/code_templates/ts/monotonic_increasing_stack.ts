@@ -2,7 +2,7 @@
 // The same logic can be applied to maintain a monotonic queue.
 
 // @ts-ignore
-let fn = arr => {
+let fn = (arr) => {
   let stack = [];
   let ans = 0;
 
@@ -17,4 +17,4 @@ let fn = arr => {
   }
 
   return ans;
-}
+};
