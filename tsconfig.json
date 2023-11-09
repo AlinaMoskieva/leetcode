@@ -4,17 +4,10 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "lib": [
-      "ES2023",
-      "ES6"
-    ],
-    "types": [
-      "node"
-    ],
+    "lib": ["ES2023", "ES6"],
+    "types": ["node"],
     "target": "es2015",
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
-  "include": [
-    "**/*.ts"
-  ],
+  "include": ["**/*.ts"]
 }
