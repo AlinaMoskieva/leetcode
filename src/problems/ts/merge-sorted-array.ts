@@ -55,3 +55,5 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
     nums1[k] = resultArray[k];
   }
 }
+
+merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3); // [1,2,2,3,5,6]

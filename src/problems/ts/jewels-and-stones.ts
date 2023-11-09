@@ -24,5 +24,5 @@ function numJewelsInStones(jewels: string, stones: string): number {
   return (stones.match(new RegExp(`[!${jewels}]`, 'g')) || []).length;
 }
 
-console.log(numJewelsInStones('aA', 'aAAbbbb')); // 3
-console.log(numJewelsInStones('z', 'ZZ')); // 0
+numJewelsInStones('aA', 'aAAbbbb'); // 3
+numJewelsInStones('z', 'ZZ'); // 0

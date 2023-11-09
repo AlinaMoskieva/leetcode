@@ -46,8 +46,8 @@ function isPalindrome(s: string): boolean {
   return true;
 }
 
-console.log(isPalindrome('A man, a plan, a canal: Panama')); // true
-console.log(isPalindrome('race a car')); // false
-console.log(isPalindrome(' ')); // true
-console.log(isPalindrome('ab_a')); // true
-console.log(isPalindrome('0P')); // false
+isPalindrome1('A man, a plan, a canal: Panama'); // true
+isPalindrome('race a car'); // false
+isPalindrome(' '); // true
+isPalindrome('ab_a'); // true
+isPalindrome('0P'); // false

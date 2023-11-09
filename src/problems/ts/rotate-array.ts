@@ -40,5 +40,5 @@ function rotate(nums: number[], k: number): void {
   nums.unshift(...lastKElems);
 }
 
-console.log(rotate([1, 2, 3, 4, 5, 6, 7], 5));
-console.log(rotate([1, 2], 3));
+rotate([1, 2, 3, 4, 5, 6, 7], 5);
+rotate([1, 2], 3);

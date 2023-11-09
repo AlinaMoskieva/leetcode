@@ -23,11 +23,13 @@ function sortedArrayToBST(
 ): TreeNode | null {
   if (leftPointer > rightPointer) return null;
 
-  let midPointer = Math.floor((leftPointer + rightPointer) / 2);
-  let root: TreeNode = new TreeNode(nums[midPointer]);
+  const midPointer = Math.floor((leftPointer + rightPointer) / 2);
+  const root: TreeNode = new TreeNode(nums[midPointer]);
 
   root.left = sortedArrayToBST(nums, leftPointer, midPointer - 1);
   root.right = sortedArrayToBST(nums, midPointer + 1, rightPointer);
 
   return root;
 }
+
+sortedArrayToBST([-10, -3, 0, 5, 9]);

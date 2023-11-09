@@ -63,7 +63,7 @@ function mergeTwoLists(
   list1: ListNode | null,
   list2: ListNode | null
 ): ListNode | null {
-  let head: ListNode;
+  const head: ListNode;
   let listOneCurrentElement = list1;
   let listTwoCurrentElement = list2;
 
@@ -90,3 +90,5 @@ function mergeTwoLists(
 
   return head;
 }
+
+mergeTwoLists([1, 2, 4], [1, 3, 4]);

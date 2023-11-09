@@ -39,3 +39,5 @@ function rob(nums: number[]): number {
     }
   }
 }
+
+rob([2, 7, 9, 3, 1]);

@@ -47,7 +47,7 @@ class Solution {
   }
 
   shuffle(): number[] {
-    let shuffledNums: number[] = this.nums.slice();
+    const shuffledNums: number[] = this.nums.slice();
 
     for (let i = 0; i < shuffledNums.length; i++) {
       const randomIndex: number = Math.floor(
@@ -62,6 +62,8 @@ class Solution {
     return shuffledNums;
   }
 }
+
+new Solution([1, 2, 3]);
 /**
  * Your Solution object will be instantiated and called as such:
  * var obj = new Solution(nums)

@@ -22,8 +22,10 @@
 // Output: 1
 
 // Complexity: T: O(n), S: O(1)
-https: function hammingDistance(x: number, y: number): number {
-  let xorToBitRepresentation: string = (x ^ y).toString(2);
+function hammingDistance(x: number, y: number): number {
+  const xorToBitRepresentation: string = (x ^ y).toString(2);
 
   return xorToBitRepresentation.split('').filter((bit) => bit === '1').length;
 }
+
+hammingDistance(1, 4); // 2

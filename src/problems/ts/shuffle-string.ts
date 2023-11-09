@@ -23,7 +23,7 @@
 // All values of indices are unique.
 
 function restoreString(s: string, indices: number[]): string {
-  let array: string[] = new Array(indices.length);
+  const array: string[] = new Array(indices.length);
 
   for (let i = 0; i < indices.length; i++) {
     array[indices[i]] = s.charAt(i);
@@ -31,3 +31,5 @@ function restoreString(s: string, indices: number[]): string {
 
   return array.join('');
 }
+
+restoreString('codeleet', [4, 5, 6, 7, 0, 2, 1, 3]);

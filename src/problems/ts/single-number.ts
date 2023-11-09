@@ -36,6 +36,6 @@ function singleNumber(nums: number[]): number {
   }
 }
 
-console.log(singleNumber([2, 2, 1]));
-console.log(singleNumber([4, 1, 2, 1, 2]));
-console.log(singleNumber([1]));
+singleNumber([2, 2, 1]);
+singleNumber([4, 1, 2, 1, 2]);
+singleNumber([1]);

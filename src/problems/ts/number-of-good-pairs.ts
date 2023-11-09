@@ -26,7 +26,7 @@
 
 function numIdenticalPairs(nums: number[]): number {
   let numberOfPairs: number = 0;
-  let numberMaps: Map<number, number> = new Map();
+  const numberMaps: Map<number, number> = new Map();
 
   nums.map((value) =>
     numberMaps.set(value, numberMaps.has(value) ? numberMaps.get(value) + 1 : 1)
@@ -39,6 +39,6 @@ function numIdenticalPairs(nums: number[]): number {
   return numberOfPairs;
 }
 
-console.log(numIdenticalPairs([1, 2, 3, 1, 1, 3])); // 4
-console.log(numIdenticalPairs([1, 1, 1, 1])); // 6
-console.log(numIdenticalPairs([1, 2, 3])); // 0
+numIdenticalPairs([1, 2, 3, 1, 1, 3]); // 4
+numIdenticalPairs([1, 1, 1, 1]); // 6
+numIdenticalPairs([1, 2, 3]); // 0

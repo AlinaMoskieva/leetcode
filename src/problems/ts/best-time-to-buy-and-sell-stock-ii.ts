@@ -53,7 +53,7 @@ function maxProfit(prices: number[]): number {
   return profit;
 }
 
-console.log(maxProfit([7, 1, 5, 3, 6, 4]));
-console.log(maxProfit([1, 2, 3, 4, 5]));
-console.log(maxProfit([7, 6, 4, 3, 1]));
-console.log(maxProfit([5, 2, 3, 2, 6, 6, 2, 9, 1, 0, 7, 4, 5, 0]));
+maxProfit([7, 1, 5, 3, 6, 4]);
+maxProfit([1, 2, 3, 4, 5]);
+maxProfit([7, 6, 4, 3, 1]);
+maxProfit([5, 2, 3, 2, 6, 6, 2, 9, 1, 0, 7, 4, 5, 0]);

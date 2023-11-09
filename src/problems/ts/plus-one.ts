@@ -48,4 +48,4 @@ function plusOne(digits: number[]): number[] {
   return add > 0 ? [add, ...digits] : digits;
 }
 
-console.log(plusOne([9, 9]));
+plusOne([9, 9]);

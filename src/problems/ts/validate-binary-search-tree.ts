@@ -60,3 +60,5 @@ function isValid(
 function isValidBST(root: TreeNode | null): boolean {
   return isValid(root, -Infinity, Infinity);
 }
+
+isValidBST(new TreeNode(2, new TreeNode(1), new TreeNode(3))); // true

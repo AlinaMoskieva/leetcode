@@ -32,7 +32,7 @@
 function isValid(s: string): boolean {
   const openBrackets: string[] = ['(', '{', '['];
   const closeBrackets: string[] = [')', '}', ']'];
-  let currentOpened: string[] = [];
+  const currentOpened: string[] = [];
 
   for (let i = 0; i < s.length; i++) {
     if (openBrackets.includes(s[i])) {
@@ -50,3 +50,5 @@ function isValid(s: string): boolean {
 
   return true;
 }
+
+isValid('()');

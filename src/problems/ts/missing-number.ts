@@ -38,3 +38,5 @@ function missingNumber(nums: number[]): number {
   nums.map((num) => (sum -= num));
   return sum;
 }
+
+missingNumber([3, 0, 1]); // 2

@@ -52,3 +52,5 @@ function reverseList(head: ListNode | null): ListNode | null {
 
   return currentNode;
 }
+
+reverseList([1, 2, 3, 4, 5]); // [5,4,3,2,1]

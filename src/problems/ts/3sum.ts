@@ -35,7 +35,7 @@
 //   -105 <= nums[i] <= 105
 
 function threeSum(nums: number[]): number[][] {
-  let triplets: number[][] = [];
+  const triplets: number[][] = [];
 
   nums.sort((a, b) => a - b);
 
@@ -66,3 +66,5 @@ function threeSum(nums: number[]): number[][] {
 
   return triplets;
 }
+
+threeSum([-1, 0, 1, 2, -1, -4]); // [[-1,-1,2],[-1,0,1]]

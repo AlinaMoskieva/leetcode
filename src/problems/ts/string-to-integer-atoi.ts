@@ -89,7 +89,7 @@ function myAtoi(s: string): number {
     : number;
 }
 
-console.log(myAtoi('00000-42a1234'));
+myAtoi('00000-42a1234');
 // console.log(myAtoi("4193 with words"));
 // console.log(myAtoi("46"))
 // console.log(myAtoi("   -42")) // -42

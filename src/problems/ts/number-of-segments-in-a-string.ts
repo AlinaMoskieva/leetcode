@@ -27,3 +27,6 @@ function countSegments(s: string): number {
 function countSegments1(s: string): number {
   return s.split(/\s+/).filter((letter) => letter !== '').length;
 }
+
+countSegments('Hello, my name is John');
+countSegments1('Hello, my name is John');

@@ -13,7 +13,7 @@
  */
 
 // Complexity: T: O(n), S: O(n)
-var solution = function (isBadVersion: any) {
+const solution = function (isBadVersion: (version: number) => boolean) {
   return function (n: number): number {
     let leftPointer = 1;
     let rightPointer = n;
@@ -31,3 +31,5 @@ var solution = function (isBadVersion: any) {
     return leftPointer;
   };
 };
+
+solution((version: number) => version >= 4)(5);

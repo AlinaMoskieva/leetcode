@@ -32,7 +32,7 @@ function reverse(x: number): number {
     : Math.sign(x) * resultedAbsoluteNumber;
 }
 
-console.log(reverse(-123));
-console.log(reverse(123));
-console.log(reverse(1230));
-console.log(reverse(1534236469));
+reverse(-123);
+reverse(123);
+reverse(1230);
+reverse(1534236469);

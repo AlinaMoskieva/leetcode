@@ -43,3 +43,5 @@ class ParkingSystem {
     return true;
   }
 }
+
+new ParkingSystem(1, 1, 0);

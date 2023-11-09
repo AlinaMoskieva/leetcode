@@ -19,7 +19,7 @@
 
 // Complexity T: O(n^2), S: O(n^2)
 function generate(numRows: number): number[][] {
-  let result: number[][] = [];
+  const result: number[][] = [];
 
   for (let i = 0; i < numRows; i++) {
     result[i] = [1];
@@ -33,3 +33,4 @@ function generate(numRows: number): number[][] {
 
   return result;
 }
+generate(5); // [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]

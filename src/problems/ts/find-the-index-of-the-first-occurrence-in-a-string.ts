@@ -32,6 +32,6 @@ function strStr(haystack: string, needle: string): number {
   return -1;
 }
 
-console.log(strStr('sadbutsad', 'sad'));
-console.log(strStr('leetcode', 'leeto'));
-console.log(strStr('leeto', 'leeto'));
+strStr('sadbutsad', 'sad');
+strStr('leetcode', 'leeto');
+strStr('leeto', 'leeto');

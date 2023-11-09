@@ -55,7 +55,7 @@ function longestCommonPrefix(strs: string[]): string {
   return strs[0].substring(0, lastPrexixLetterPosition);
 }
 
-console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
-console.log(longestCommonPrefix(['dog', 'racecar', 'car']));
-console.log(longestCommonPrefix(['']));
-console.log(longestCommonPrefix(['flower', 'flower', 'flower', 'flower']));
+longestCommonPrefix(['flower', 'flow', 'flight']);
+longestCommonPrefix(['dog', 'racecar', 'car']);
+longestCommonPrefix(['']);
+longestCommonPrefix(['flower', 'flower', 'flower', 'flower']);

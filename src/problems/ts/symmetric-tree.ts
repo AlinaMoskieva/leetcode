@@ -48,3 +48,5 @@ function isSame(
 function isSymmetric(root: TreeNode | null): boolean {
   return isSame(root.left, root.right);
 }
+
+isSymmetric(new TreeNode(1, new TreeNode(2), new TreeNode(2)));

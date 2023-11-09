@@ -29,7 +29,7 @@ function makeStep(
   activeRoutes: number[]
 ): number {
   let waysNumber = 0;
-  let currentPoint = stepFrom + stepsNumber;
+  const currentPoint = stepFrom + stepsNumber;
 
   if (currentPoint === desctination) {
     waysNumber += counter[stepFrom] ? counter[stepFrom] : 1;
@@ -45,11 +45,11 @@ function makeStep(
 
 function climbStairs1(n: number): number {
   let waysNumber = 0;
-  let activeRoutes: number[] = [0];
-  let counter: Record<number, number> = {};
+  const activeRoutes: number[] = [0];
+  const counter: Record<number, number> = {};
 
   while (activeRoutes.length) {
-    let stepFrom = activeRoutes.shift();
+    const stepFrom = activeRoutes.shift();
 
     waysNumber += makeStep(1, stepFrom, counter, n, activeRoutes);
     waysNumber += makeStep(2, stepFrom, counter, n, activeRoutes);
@@ -66,7 +66,7 @@ function climbStairs(n: number): number {
   let oneBefore = 2;
 
   for (let i = 3; i <= n; i++) {
-    let tmp = oneBefore;
+    const tmp = oneBefore;
 
     oneBefore = oneBefore + twoBefore;
     twoBefore = tmp;
@@ -74,3 +74,6 @@ function climbStairs(n: number): number {
 
   return oneBefore;
 }
+
+climbStairs1(3);
+climbStairs(3);

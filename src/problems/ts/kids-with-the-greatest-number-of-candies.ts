@@ -42,4 +42,4 @@ function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
   );
 }
 
-console.log([2, 3, 5, 1, 3]);
+kidsWithCandies([2, 3, 5, 1, 3], 3);

@@ -32,3 +32,5 @@ function hammingWeight(n: number): number {
     .split('')
     .filter((bit) => bit === '1').length;
 }
+
+hammingWeight(1011);

@@ -30,5 +30,5 @@ function isAnagram(s: string, t: string): boolean {
   return !t;
 }
 
-console.log(isAnagram('anagram', 'nagaram'));
-console.log(isAnagram('rat', 'car'));
+isAnagram('anagram', 'nagaram');
+isAnagram('rat', 'car');

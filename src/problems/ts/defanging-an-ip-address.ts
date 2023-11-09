@@ -20,3 +20,5 @@
 function defangIPaddr(address: string): string {
   return address.replaceAll('.', '[.]');
 }
+
+defangIPaddr('1.1.1.1');

@@ -24,8 +24,8 @@ class TreeNode {
 function levelOrder(root: TreeNode | null): number[][] {
   if (!root) return [];
 
-  let result: number[][] = [];
-  let queue: TreeNode[] = [root];
+  const result: number[][] = [];
+  const queue: TreeNode[] = [root];
 
   while (queue.length) {
     let length = queue.length;
@@ -33,7 +33,7 @@ function levelOrder(root: TreeNode | null): number[][] {
     result.push(queue.map((node) => node.val));
 
     while (length--) {
-      let node: TreeNode = queue.shift();
+      const node: TreeNode = queue.shift();
 
       if (node.left) queue.push(node.left);
       if (node.right) queue.push(node.right);
@@ -42,3 +42,11 @@ function levelOrder(root: TreeNode | null): number[][] {
 
   return result;
 }
+
+levelOrder(
+  new TreeNode(
+    3,
+    new TreeNode(9),
+    new TreeNode(20, new TreeNode(15), new TreeNode(7))
+  )
+);

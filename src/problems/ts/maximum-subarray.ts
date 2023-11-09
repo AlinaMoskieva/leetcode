@@ -42,3 +42,5 @@ function maxSubArray(nums: number[]): number {
   }
   return globalMax;
 }
+
+maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]); // 6

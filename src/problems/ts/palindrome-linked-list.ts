@@ -62,3 +62,5 @@ function isPalindrome(head: ListNode | null): boolean {
 
   return true;
 }
+
+isPalindrome([1, 2, 2, 1]); // true

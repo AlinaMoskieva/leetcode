@@ -33,9 +33,17 @@
 
 // Complexity: T: O(n), S: O(1)
 function reverseBits(n: number): number {
-  let stringifiedN: string = n.toString(2);
-  let reversedStringifiedN: string = stringifiedN.split('').reverse().join('');
-  let paddedReversedStringifiedN: string = reversedStringifiedN.padEnd(32, '0');
+  const stringifiedN: string = n.toString(2);
+  const reversedStringifiedN: string = stringifiedN
+    .split('')
+    .reverse()
+    .join('');
+  const paddedReversedStringifiedN: string = reversedStringifiedN.padEnd(
+    32,
+    '0'
+  );
 
   return parseInt(paddedReversedStringifiedN, 2);
 }
+
+reverseBits(43261596);

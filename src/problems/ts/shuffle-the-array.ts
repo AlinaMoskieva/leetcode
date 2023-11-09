@@ -25,3 +25,5 @@ function shuffle(nums: number[], n: number): number[] {
 
   return result;
 }
+
+shuffle([2, 5, 1, 3, 4, 7], 3);

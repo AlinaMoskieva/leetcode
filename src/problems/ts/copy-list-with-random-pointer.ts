@@ -39,7 +39,7 @@ class Node {
 }
 
 function copyRandomList(head: Node | null): Node | null {
-  let pointers = new Map();
+  const pointers = new Map();
   let currentNode: Node = head;
 
   while (currentNode) {
@@ -59,3 +59,5 @@ function copyRandomList(head: Node | null): Node | null {
 
   return pointers.get(head);
 }
+
+copyRandomList(null);

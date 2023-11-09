@@ -64,6 +64,8 @@ class MinStack {
   }
 }
 
+new MinStack();
+
 /**
  * Your MinStack object will be instantiated and called as such:
  * var obj = new MinStack()

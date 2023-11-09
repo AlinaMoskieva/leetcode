@@ -30,7 +30,7 @@ function findIntersectionsFrom(
   elementsStatisticsNums1: Map<number, number>,
   elementsStatisticsNums2: Map<number, number>
 ): number[] {
-  let intersections: number[] = [];
+  const intersections: number[] = [];
 
   elementsStatisticsNums1.forEach((frequency, number) => {
     if (elementsStatisticsNums2.get(number) !== undefined) {
@@ -46,8 +46,8 @@ function findIntersectionsFrom(
 }
 
 function intersect(nums1: number[], nums2: number[]): number[] {
-  let elementsStatisticsNums1: Map<number, number> = new Map();
-  let elementsStatisticsNums2: Map<number, number> = new Map();
+  const elementsStatisticsNums1: Map<number, number> = new Map();
+  const elementsStatisticsNums2: Map<number, number> = new Map();
 
   for (let i = 0; i < Math.max(nums1.length, nums2.length); i++) {
     recordElement(nums1[i], elementsStatisticsNums1);
@@ -59,5 +59,5 @@ function intersect(nums1: number[], nums2: number[]): number[] {
     : findIntersectionsFrom(elementsStatisticsNums2, elementsStatisticsNums1);
 }
 
-console.log(intersect([1, 2, 2, 1], [2, 2, 3, 4]));
-console.log(intersect([4, 9, 5], [9, 4, 9, 8, 4]));
+intersect([1, 2, 2, 1], [2, 2, 3, 4]);
+intersect([4, 9, 5], [9, 4, 9, 8, 4]);

@@ -39,8 +39,8 @@
 
 // Complexity: T: O(n^2), S: O(n)
 function setZeroes(matrix: number[][]): void {
-  let columsToZero: number[] = [];
-  let rowsToZero: number[] = [];
+  const columsToZero: number[] = [];
+  const rowsToZero: number[] = [];
 
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix.length; j++) {
@@ -67,3 +67,9 @@ function setZeroes(matrix: number[][]): void {
     }
   }
 }
+
+setZeroes([
+  [1, 1, 1],
+  [1, 0, 1],
+  [1, 1, 1]
+]);

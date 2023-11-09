@@ -34,4 +34,4 @@ function moveZeroes(nums: number[]): void {
   }
 }
 
-console.log(moveZeroes([0, 1, 2, 0, 3, 4, 0, 0, 5]));
+moveZeroes([0, 1, 2, 0, 3, 4, 0, 0, 5]);

@@ -29,14 +29,16 @@
 // Only one valid answer exists.
 
 function twoSum(nums: number[], target: number): number[] {
-  let map = new Map();
+  const map = new Map();
 
   for (let i = 0; i < nums.length; i++) {
-    let currentNumer = nums[i];
-    let lookFor = target - currentNumer;
+    const currentNumer = nums[i];
+    const lookFor = target - currentNumer;
 
     if (map.has(lookFor)) return [i, map.get(lookFor)];
 
     map.set(currentNumer, i);
   }
 }
+
+twoSum([2, 7, 11, 15], 9);

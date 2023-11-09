@@ -47,3 +47,5 @@ function findDuplicate(nums: number[]): number {
 
   return fastPointer;
 }
+
+findDuplicate([1, 3, 4, 2, 2]);

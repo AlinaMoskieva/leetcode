@@ -23,7 +23,7 @@
 // Constraints:
 
 function uniquePaths(m: number, n: number): number {
-  let field = Array.from(Array(m).fill(1), () => new Array(n).fill(1));
+  const field = Array.from(Array(m).fill(1), () => new Array(n).fill(1));
 
   for (let i = 1; i < m; i++) {
     for (let j = 1; j < n; j++) {
@@ -34,4 +34,4 @@ function uniquePaths(m: number, n: number): number {
   return field[m - 1][n - 1];
 }
 
-console.log(uniquePaths(3, 7));
+uniquePaths(3, 7);

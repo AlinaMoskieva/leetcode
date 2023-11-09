@@ -56,3 +56,5 @@ function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
 
   return head;
 }
+
+removeNthFromEnd([1, 2, 3, 4, 5], 2); // [1,2,3,5]

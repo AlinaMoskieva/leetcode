@@ -29,6 +29,6 @@ function firstUniqChar(s: string): number {
   return -1;
 }
 
-console.log(firstUniqChar('leetcode'));
-console.log(firstUniqChar('loveleetcode'));
-console.log(firstUniqChar('aabb'));
+firstUniqChar('leetcode');
+firstUniqChar('loveleetcode');
+firstUniqChar('aabb');
