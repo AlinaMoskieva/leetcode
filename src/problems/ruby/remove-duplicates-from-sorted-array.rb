@@ -49,7 +49,7 @@ def remove_duplicates(nums)
   for i in 0..nums.length - 1
     if (nums[i] != nums[i + 1])
       nums[pointer] = nums[i + 1]
-      pointer =+ 1
+      pointer += 1
     end
   end
 
