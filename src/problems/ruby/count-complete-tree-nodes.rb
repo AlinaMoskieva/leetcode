@@ -1,0 +1,63 @@
+# https://leetcode.com/problems/count-complete-tree-nodes
+
+# 222. Count Complete Tree Nodes
+# Easy
+
+# Given the root of a complete binary tree, return the number of the nodes in the tree.
+
+# According to Wikipedia, every level, except possibly the last, is completely filled in a complete binary tree, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.
+
+# Design an algorithm that runs in less than O(n) time complexity.
+
+# Example 1:
+
+# Input: root = [1,2,3,4,5,6]
+# Output: 6
+# Example 2:
+
+# Input: root = []
+# Output: 0
+# Example 3:
+
+# Input: root = [1]
+# Output: 1
+
+# Constraints:
+
+# The number of nodes in the tree is in the range [0, 5 * 104].
+# 0 <= Node.val <= 5 * 104
+# The tree is guaranteed to be complete.
+
+# Definition for a binary tree node.
+# class TreeNode
+#     attr_accessor :val, :left, :right
+#     def initialize(val = 0, left = nil, right = nil)
+#         @val = val
+#         @left = left
+#         @right = right
+#     end
+# end
+# @param {TreeNode} root
+# @return {Integer}
+def count_nodes(root)
+  return 0 unless root
+
+  right_dept = 1
+  left_dept = 1
+  left_subtree = root.left
+  right_subtree = root.right
+
+  while left_subtree
+    left_subtree = left_subtree.left
+    left_dept += 1
+  end
+
+  while right_subtree
+    right_subtree = right_subtree.right
+    right_dept += 1
+  end
+
+  return 2.pow(left_dept) - 1 if left_dept == right_dept
+
+  1 + count_nodes(root.left) + count_nodes(root.right)
+end
